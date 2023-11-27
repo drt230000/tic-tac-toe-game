@@ -1,20 +1,18 @@
-def box_display():
-    # show box template 
+board = ["-", "-", "-"
+         "-", "-", "-"
+         "-", "-", "-"]
+currentPlayer = "X"
 
-def get_winner(player_x_location, player_o_location):
-    # determines how to win (three marks in a row)
 
-def winner_status(winner):
-    # state who won or if no winner is present 
+#printing the game board
 
-def confetti_display():
-    # confetti shown dedicated to winner 
-    # no winner = no confetti
+# take player input 
 
-def main():
-    print("Start game!")
-    player_x_location = input
-    player_o_location = input
+# check for win or tie 
+
+# switch the player 
+
+# check for win or tie again
 
 if __name__ == "__main__":
     main()
