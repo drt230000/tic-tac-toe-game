@@ -60,7 +60,13 @@ def checkDiag(board):
         winner = board[2]
         return True 
     
-    
+
+def checkTie(board):
+    global gameRunning
+    if "-" not in board:
+        printBoard(board)
+        print("It is a tie!")
+        gameRunning = False
 
 # switch the player 
 
