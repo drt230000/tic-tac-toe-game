@@ -69,6 +69,12 @@ def checkTie(board):
         gameRunning = False
 
 # switch the player 
+def switchPlayer():
+    global currentPlayer
+    if currentPlayer == "X":
+        currentPlayer = "O"
+    else:
+        currentPlayer = "X"
 
 # check for win or tie again
 
