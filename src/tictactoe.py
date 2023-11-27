@@ -23,7 +23,18 @@ def playerInput(board):
     else:
         print("Oops, player is already in that spot!")
 
+
 # check for win or tie 
+def checkHorizontal(board):
+    global winner 
+    if board[0] == board[1] == board[2] and board[1] != "-":
+        winner = board[0]
+        return True 
+    elif board[3] == board[4] == board[5] and board[3] != "-":
+        winner = board[3]
+        return True 
+    elif board[6] == board[7] == board[8] and board[6] != "-":
+        return True 
 
 # switch the player 
 
@@ -33,4 +44,3 @@ def playerInput(board):
 while gameRunning:
     printBoard(board)
     playerInput(board)
-    
