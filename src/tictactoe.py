@@ -58,6 +58,11 @@ def checkTie(board):
 def checkWin():
     if checkDiagonal(board) or checkHorizontal(board) or checkRow(board):
         print(f"The winner is {winner}!")
+    if winner == "X":
+        return "PlayerX_Win.PNG"
+    if winner == "O":
+        return "PlayerO_Win.PNG"
+        
 
 #switch the player
 def switchPlayer():
