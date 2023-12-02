@@ -52,12 +52,12 @@ def checkTie(board):
     global gameRunning
     if "-" not in board:
         printBoard(board)
-        print("Its a tie")
+        print("It's a tie!")
         gameRunning = False
 
 def checkWin():
     if checkDiagonal(board) or checkHorizontal(board) or checkRow(board):
-        print(f"The winner is {winner}")
+        print(f"The winner is {winner}!")
 
 #switch the player
 def switchPlayer():
