@@ -103,3 +103,6 @@ while gameRunning:
     computer(board)
     checkWin()
     checkTie(board)
+
+def main():
+    main
