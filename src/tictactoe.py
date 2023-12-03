@@ -65,7 +65,7 @@ def checkWin():
 
 def winner_image():
     from PIL import Image
-    img = Image
+    
     if winner == currentPlayer("X"):
         playerxwin = Image.open("PlayerX_Win.PNG")
         playerxwin.show()
