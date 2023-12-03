@@ -65,18 +65,16 @@ def checkWin():
 
 def winner_image(img):
     from PIL import Image
-    if winner == "X":
+    if winner == currentPlayer("X"):
         Image.open("PlayerX_Win.PNG")
         img.show()
-        img.close()
-    if winner == "O":
+    if winner == currentPlayer("O"):
         Image.open("PlayerO_Win.PNG")
         img.show()
-        img.close()
     if winner == None:
         Image.open("Tie.PNG")
         img.show()
-        img.close()
+        
         
 
 #switch the player
