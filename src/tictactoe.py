@@ -72,14 +72,14 @@ def winner_image():
     from PIL import Image
 
     if winner == "X":
-        playerxwin = Image.open('playerxwin.png')
-        playerxwin.show()
+        img_playerxwin = Image.open('playerxwin.png')
+        img_playerxwin.show()
     if winner == "O":
-        playerowin = Image.open('playerowin.png') 
-        playerowin.show()
+        img_playerowin = Image.open('playerowin.png') 
+        img_playerowin.show()
     if winner == None:
-        tie = Image.open('tie.png')
-        tie.show()
+        img_tie = Image.open('tie.png')
+        img_tie.show()
 
 #switch the player
 
