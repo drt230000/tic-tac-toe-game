@@ -42,16 +42,19 @@ def checkHorizontal(board):
     if (board[0] == board[1] == board[2] and board[0] != "-") or (board[3] == board[4] == board[5] and board[3] != "-") or (board[6] == board[7] == board[8] and board[6] != "-"):
         winner = currentPlayer
         return True
+    
 def checkRow(board):
     global winner
     if (board[0] == board[3] == board[6] and board[0] != "-") or (board[1] == board[4] == board[7] and board[1] != "-") or (board[2] == board[5] == board[8] and board[2] != "-"):
         winner = currentPlayer
         return True
+    
 def checkDiagonal(board):
     global winner
     if (board[0] == board[4] == board[5] and board[0] != "-") or (board[2] == board[4] == board[6] and board[2] != "-"):
         winner = currentPlayer
         return True
+    
 def checkTie(board):
     global gameRunning
     if "-" not in board:
@@ -64,19 +67,19 @@ def checkWin():
         print(f"The winner is {winner}!")
         gameRunning = False
         exit()
-        
-#def winner_image():
-    #from PIL import Image
 
-    #if winner == currentPlayer is "X":
-       # playerxwin = Image.open('PlayerX_Win.PNG')
-       # playerxwin.show()
-    #else:
-       # playerowin= Image.open('PlayerO_Win.PNG')
-       # playerowin.show()
-    #if winner == None:
-       # tie = Image.open('Tie.PNG')
-       # tie.show()  
+def winner_image():
+    from PIL import Image
+
+    if winner == "X":
+        playerxwin = Image.open('playerxwin.png')
+        playerxwin.show()
+    if winner == "O":
+        playerowin = Image.open('playerowin.png') 
+        playerowin.show()
+    if winner == None:
+        tie = Image.open('tie.png')
+        tie.show()
 
 #switch the player
 
