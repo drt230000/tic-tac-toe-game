@@ -1,3 +1,5 @@
+from PIL import Image
+
 board = ['-', '-', '-',
         '-', '-', '-',
         '-', '-', '-']
@@ -15,6 +17,7 @@ def printBoard(board):
     print(board[6] + " | " + board[7] + " | " + board[8])
 
 #take player input
+
 def playerInput(board):
     while True:
         if currentPlayer == "X":
@@ -33,6 +36,7 @@ def playerInput(board):
 
 
 #check for win or tie
+
 def checkHorizontal(board):
     global winner
     if (board[0] == board[1] == board[2] and board[0] != "-") or (board[3] == board[4] == board[5] and board[3] != "-") or (board[6] == board[7] == board[8] and board[6] != "-"):
@@ -59,16 +63,26 @@ def checkWin():
     if checkDiagonal(board) or checkHorizontal(board) or checkRow(board):
         print(f"The winner is {winner}!")
 
-def winner_image(Image):
+def winner_image(img, filename):
     if winner == "X":
-        Image.open("PlayerX_Win.PNG")
+        filename = "PlayerX_Win.PNG"
+        Image.open(filename)
+        img.show()
+        img.close()
     if winner == "O":
-        Image.open("PlayerO_Win.PNG")
+        filename = "PlayerO_Win.PNG"
+        Image.open(filename)
+        img.show()
+        img.close()
     if winner == None:
-        
+        filename = "Tie.PNG"
+        Image.open(filename)
+        img.show()
+        img.close()
         
 
 #switch the player
+
 def switchPlayer():
     global currentPlayer
     if currentPlayer == "X":
@@ -88,6 +102,7 @@ while gameRunning:
     checkWin()
     checkTie(board)
     switchPlayer()
+    
 
 def main():
     main
