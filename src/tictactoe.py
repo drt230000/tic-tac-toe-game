@@ -63,20 +63,18 @@ def checkWin():
     if checkDiagonal(board) or checkHorizontal(board) or checkRow(board):
         print(f"The winner is {winner}!")
 
-def winner_image(img, filename):
+def winner_image(img):
+    from PIL import Image
     if winner == "X":
-        filename = "PlayerX_Win.PNG"
-        Image.open(filename)
+        Image.open("PlayerX_Win.PNG")
         img.show()
         img.close()
     if winner == "O":
-        filename = "PlayerO_Win.PNG"
-        Image.open(filename)
+        Image.open("PlayerO_Win.PNG")
         img.show()
         img.close()
     if winner == None:
-        filename = "Tie.PNG"
-        Image.open(filename)
+        Image.open("Tie.PNG")
         img.show()
         img.close()
         
