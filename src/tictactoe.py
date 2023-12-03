@@ -63,19 +63,18 @@ def checkWin():
     if checkDiagonal(board) or checkHorizontal(board) or checkRow(board):
         print(f"The winner is {winner}!")
 
-def winner_image(img):
+def winner_image():
     from PIL import Image
+    img = Image
     if winner == currentPlayer("X"):
-        Image.open("PlayerX_Win.PNG")
-        img.show()
+        playerxwin = Image.open("PlayerX_Win.PNG")
+        playerxwin.show()
     if winner == currentPlayer("O"):
-        Image.open("PlayerO_Win.PNG")
-        img.show()
+        playerowin= Image.open("PlayerO_Win.PNG")
+        playerowin.show()
     if winner == None:
-        Image.open("Tie.PNG")
-        img.show()
-        
-        
+        tie = Image.open("Tie.PNG")
+        tie.show()  
 
 #switch the player
 
@@ -85,8 +84,6 @@ def switchPlayer():
         currentPlayer = "O"
     else:
         currentPlayer = "X"
-
-
 
 #check for win or tie again
 
@@ -102,3 +99,6 @@ while gameRunning:
 
 def main():
     main
+
+if __name__ == "__main__":
+    main()
