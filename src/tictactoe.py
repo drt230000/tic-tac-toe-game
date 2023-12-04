@@ -1,5 +1,3 @@
-from PIL import Image
-
 board = ['-', '-', '-',
         '-', '-', '-',
         '-', '-', '-']
@@ -69,7 +67,7 @@ def checkWin():
         gameRunning = False
         exit()
 
-def winner_image():
+def result_image():
     from PIL import Image
 
     if winner == "X":
