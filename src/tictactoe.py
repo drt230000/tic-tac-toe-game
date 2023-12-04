@@ -59,8 +59,9 @@ def checkTie(board):
     global gameRunning
     if "-" not in board:
         printBoard(board)
-        print("It's a tie!")
+        print("This game is a tie!")
         gameRunning = False
+        exit()
 
 def checkWin():
     if checkDiagonal(board) or checkHorizontal(board) or checkRow(board):
